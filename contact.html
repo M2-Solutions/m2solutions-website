@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — M2 Solutions</title>
+  <meta name="description" content="Get in touch with M2 Solutions. We'd be glad to discuss your business transformation challenge." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-mark">M²</div>
+          M2 Solutions
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="nav-cta active">Get in touch</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-label" style="margin-bottom: 20px;">Contact</p>
+      <h1>Let's start a<br><em>conversation.</em></h1>
+      <p>Whether you're exploring options or ready to get started, we're happy to talk through what you're facing.</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section style="background: var(--white);">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info fade-up">
+          <h2>Get in<br><em>touch.</em></h2>
+          <p>Use the form to tell us a little about your organisation and the challenge you're working through. We'll come back to you promptly to arrange a conversation.</p>
+          <p>There's no obligation and no sales process — just a straightforward discussion about whether we can help.</p>
+
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@m2solutions.co.uk">info@m2solutions.co.uk</a>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>We typically respond within one business day</span>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap fade-up">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+            <!-- Netlify hidden field -->
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Acme Corp" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@acmecorp.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What can we help with?</label>
+              <select id="subject" name="subject">
+                <option value="" disabled selected>Select an area</option>
+                <option value="systems-integration">Systems Integration</option>
+                <option value="data-analysis">Data Analysis</option>
+                <option value="api-strategy">API Strategy</option>
+                <option value="business-analysis">Business Analysis</option>
+                <option value="transformation">Business Transformation</option>
+                <option value="other">Other / Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell us about your challenge</label>
+              <textarea id="message" name="message" placeholder="A brief overview of your organisation and what you're looking to achieve..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Send message</button>
+            <p class="form-note">Your details are used only to respond to your enquiry and are never shared with third parties.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <div class="logo-mark">M²</div>
+          M2 Solutions
+        </div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">© <span class="footer-year"></span> M2 Solutions Ltd. Registered in England and Wales. m2solutions.co.uk</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
