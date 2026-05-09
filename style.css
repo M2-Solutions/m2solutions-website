@@ -675,6 +675,56 @@ footer {
   margin-top: 8px;
 }
 
+/* ── Experience Cards ──────────────────────────────────── */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 56px;
+}
+.experience-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 36px 32px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.experience-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+.exp-sector {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.exp-client {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.exp-programme {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.exp-detail {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
 /* ── Animations ────────────────────────────────────────── */
 .fade-up {
   opacity: 0;
@@ -707,6 +757,7 @@ footer {
 
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .values-grid { grid-template-columns: 1fr; }
+  .experience-grid { grid-template-columns: 1fr; }
 
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .contact-form-wrap { padding: 32px 24px; }
