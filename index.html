@@ -1,193 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M2 Solutions — Business Analysis & Transformation Consultancy</title>
-  <meta name="description" content="M2 Solutions helps large enterprises navigate complex business transformation — bridging strategy, systems, and delivery through expertise in systems integration, data analysis, and API strategy." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M2 Solutions — Business Transformation Consultancy</title>
+  <meta name="description" content="M2 Solutions brings order to complex digital programmes, from discovery through to delivery. Senior delivery capability for consultancies and system integrators.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
-          <div class="logo-mark">M²</div>
-          M2 Solutions
-        </a>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
+<!-- ── NAV ──────────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="M2 Solutions home">
+      <svg width="28" height="28" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M2 12 L38 40 L2 68 L18 68 L54 40 L18 12 Z" fill="white"/>
+        <path d="M26 12 L62 40 L26 68 L42 68 L78 40 L42 12 Z" fill="white" opacity="0.32"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-m2">M2</span>
+        <span class="nav-logo-sol">Solutions</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">About</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#track-record" class="nav-link">Work</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile">
+    <a href="about.html" class="nav-mobile-link">About</a>
+    <a href="index.html#services" class="nav-mobile-link">Services</a>
+    <a href="index.html#track-record" class="nav-mobile-link">Work</a>
+    <a href="contact.html" class="nav-mobile-cta">Get in touch</a>
+  </div>
+</nav>
+
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Business Transformation Consultancy</div>
+      <h1 class="hero-h1">Cutting through complexity,<br>from discovery to done.</h1>
+      <p class="hero-sub">We work with consultancies and system integrators who need trusted, senior delivery capability on complex digital programmes — across the public and private sector.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="hero-btn">Get in touch</a>
+        <a href="#services" class="hero-btn-ghost">Our services →</a>
       </div>
     </div>
-    <div class="nav-mobile">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Get in touch</a>
-    </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <p class="hero-eyebrow">Business Analysis &amp; Transformation</p>
-        <h1>Turning complexity<br>into <em>clarity</em>.</h1>
-        <p class="hero-sub">We help large enterprises navigate the challenges of business transformation — bridging the gap between business strategy and technical delivery through deep expertise in systems integration, data, and APIs.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn-primary">
-            Let's talk
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="about.html" class="btn-ghost">Learn about us</a>
+
+<!-- ── SERVICES ──────────────────────────────────────────── -->
+<section class="section section-white" id="services">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-eyebrow">What we deliver</div>
+      <h2 class="section-h2">Senior resource across the full<br>delivery lifecycle.</h2>
+      <p class="section-intro">Flexible, experienced, and ready to embed within your team from day one.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card fade-up fade-up-delay-1">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#567596" stroke-width="1.5"/>
+            <rect x="12" y="3" width="7" height="7" rx="1.5" stroke="#567596" stroke-width="1.5"/>
+            <rect x="3" y="12" width="7" height="7" rx="1.5" stroke="#567596" stroke-width="1.5"/>
+            <path d="M15.5 12v7M12 15.5h7" stroke="#567596" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
+        <div class="service-title">Business Analysis</div>
+        <div class="service-body">Requirements gathering, process mapping, stakeholder engagement, and delivery documentation — structured and clear, from the outset.</div>
       </div>
-    </div>
-  </section>
 
-  <!-- Value Proposition -->
-  <section class="value-section">
-    <div class="container">
-      <div class="value-grid">
-        <div class="value-intro fade-up">
-          <p class="section-label">What we do</p>
-          <h2 class="section-heading">The bridge between<br><em>strategy and delivery.</em></h2>
-          <p class="section-body" style="margin-top: 24px;">Large organisations face transformation challenges that are rarely simple. We work alongside enterprise teams to make sense of complexity — designing solutions that are practical, integrated, and built to last.</p>
-          <p class="section-body" style="margin-top: 16px;">Our work spans the full journey from initial analysis through to implementation — always with a clear focus on outcomes that matter to the business.</p>
-          <p class="section-body" style="margin-top: 16px;">We work through established consultancies and system integrators, embedding within their delivery teams to provide the senior-level BA and Product Owner capability that complex programmes depend on.</p>
+      <div class="service-card fade-up fade-up-delay-2">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M4 18V8l4 4 3-5 3 5 4-4v10" stroke="#567596" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 18h14" stroke="#567596" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
-        <div class="value-pillars">
-          <div class="pillar fade-up">
-            <div class="pillar-icon">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <div>
-              <h3>Systems Integration</h3>
-              <p>Connecting disparate platforms and processes so that enterprise systems work as a coherent whole — not a collection of silos.</p>
-            </div>
-          </div>
-          <div class="pillar fade-up">
-            <div class="pillar-icon">
-              <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            </div>
-            <div>
-              <h3>Data Analysis</h3>
-              <p>Turning raw data into meaningful insight — enabling better decisions at every level of the organisation.</p>
-            </div>
-          </div>
-          <div class="pillar fade-up">
-            <div class="pillar-icon">
-              <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            </div>
-            <div>
-              <h3>API Strategy</h3>
-              <p>Defining and implementing API frameworks that underpin scalable integration — built around your architecture and long-term roadmap.</p>
-            </div>
-          </div>
-          <div class="pillar fade-up">
-            <div class="pillar-icon">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <h3>Business Analysis &amp; Product Ownership</h3>
-              <p>Structured analysis that surfaces the real requirements — combined with hands-on product ownership to keep delivery aligned with what the business actually needs.</p>
-            </div>
-          </div>
-        </div>
+        <div class="service-title">Product Ownership</div>
+        <div class="service-body">Backlog management, prioritisation, sprint planning, and delivery oversight. We keep complex programmes moving in the right direction.</div>
       </div>
-    </div>
-  </section>
 
-  <!-- Strip -->
-  <div class="strip">
-    <div class="container">
-      <div class="strip-inner">
-        <div class="strip-item fade-up">
-          <div class="strip-number">Partner&#8209;first</div>
-          <div class="strip-label">We work through established consultancies and system integrators — embedded within their delivery teams</div>
+      <div class="service-card fade-up fade-up-delay-1">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <circle cx="5" cy="11" r="2.5" stroke="#567596" stroke-width="1.5"/>
+            <circle cx="17" cy="11" r="2.5" stroke="#567596" stroke-width="1.5"/>
+            <path d="M7.5 11h7" stroke="#567596" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M11 5v3M11 14v3" stroke="#567596" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
-        <div class="strip-item fade-up">
-          <div class="strip-number">Public sector</div>
-          <div class="strip-label">Experienced in UK central government programmes, working alongside recognised delivery partners</div>
+        <div class="service-title">Systems Integration</div>
+        <div class="service-body">Defining and managing integrations between enterprise systems — with the rigour and precision that high-stakes programmes demand.</div>
+      </div>
+
+      <div class="service-card fade-up fade-up-delay-2">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M3 16l4-5 3 3 4-6 5 4" stroke="#567596" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div class="strip-item fade-up">
-          <div class="strip-number">Senior&#8209;level</div>
-          <div class="strip-label">Experienced resource that understands how to represent your firm well on client programmes</div>
+        <div class="service-title">Data & API Strategy</div>
+        <div class="service-body">Scoping, documenting, and coordinating data flows and API-driven solutions across complex organisational landscapes.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── HOW WE WORK ────────────────────────────────────────── -->
+<section class="section section-cloud" id="how-we-work">
+  <div class="container">
+    <div class="how-grid">
+      <div class="how-text fade-up">
+        <div class="section-eyebrow">How we work</div>
+        <div class="how-statement">We slot into your team.<br>Not above it.</div>
+        <p class="how-body">Consultancies and system integrators come to us when they need experienced specialists to fulfil delivery roles on client programmes. We operate as a trusted extension of your team — senior enough to represent you well, flexible enough to fit how you work.</p>
+        <a href="contact.html" class="btn btn-primary" style="align-self:flex-start; margin-top:8px;">Get in touch</a>
+      </div>
+      <div class="how-visual fade-up fade-up-delay-1">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <div class="how-step-text">
+            <div class="how-step-label">Discovery</div>
+            <div class="how-step-desc">Understanding the programme, the team, and what good delivery looks like in this context.</div>
+          </div>
+        </div>
+        <div class="how-divider"></div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <div class="how-step-text">
+            <div class="how-step-label">Embed</div>
+            <div class="how-step-desc">Joining your delivery team — representing your organisation, contributing from day one.</div>
+          </div>
+        </div>
+        <div class="how-divider"></div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <div class="how-step-text">
+            <div class="how-step-label">Deliver</div>
+            <div class="how-step-desc">Bringing clarity, structure, and momentum across the full lifecycle — from requirements to handover.</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Selected Experience -->
-  <section style="background: var(--white);">
-    <div class="container">
-      <div class="fade-up">
-        <p class="section-label">Selected experience</p>
-        <h2 class="section-heading">Delivered across public<br><em>and private sector.</em></h2>
+
+<!-- ── TRACK RECORD ───────────────────────────────────────── -->
+<section class="section section-white" id="track-record">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-eyebrow">Track record</div>
+      <h2 class="section-h2">Delivered across government<br>and large enterprise.</h2>
+      <p class="section-intro">In programmes where the stakes are high and the margin for error is low.</p>
+    </div>
+    <div class="track-grid">
+
+      <div class="track-card fade-up fade-up-delay-1">
+        <span class="track-sector">Public Sector</span>
+        <div class="track-client">DEFRA — Border Trade Matching Service</div>
+        <div class="track-partner">Via Equal Experts</div>
+        <div class="track-divider"></div>
+        <div class="track-body">Business Analyst and Product Owner on BTMS — a critical government service matching Customs Declarations with health entry documents for goods entering the UK.</div>
       </div>
-      <div class="experience-grid">
-        <div class="experience-card fade-up">
-          <p class="exp-sector">UK Central Government</p>
-          <p class="exp-client">DEFRA</p>
-          <p class="exp-programme">Border Trade Matching Service</p>
-          <p class="exp-detail">Business Analyst and Product Owner on a high-stakes government border systems programme — matching customs declarations with health entry documents for goods entering the UK. Delivered via Equal Experts.</p>
-        </div>
-        <div class="experience-card fade-up">
-          <p class="exp-sector">UK Central Government</p>
-          <p class="exp-client">Department for Education</p>
-          <p class="exp-programme">API Management</p>
-          <p class="exp-detail">Defined and coordinated an API management solution across departmental systems, leading the requirements workstream and coordinating delivery across technical and business stakeholders.</p>
-        </div>
-        <div class="experience-card fade-up">
-          <p class="exp-sector">Private Sector</p>
-          <p class="exp-client">Jaguar Land Rover</p>
-          <p class="exp-programme">Microsoft Dynamics</p>
-          <p class="exp-detail">Led the business analysis and requirements workstream for a major enterprise CRM/ERP implementation — managing complexity across a large, multi-stakeholder programme.</p>
-        </div>
+
+      <div class="track-card fade-up fade-up-delay-2">
+        <span class="track-sector">Public Sector</span>
+        <div class="track-client">DEFRA</div>
+        <div class="track-partner">Via Kainos</div>
+        <div class="track-divider"></div>
+        <div class="track-body">A separate engagement at the same department through a different delivery partner — demonstrating continuity of trusted public sector delivery.</div>
+      </div>
+
+      <div class="track-card fade-up fade-up-delay-1">
+        <span class="track-sector">Public Sector</span>
+        <div class="track-client">Department for Education</div>
+        <div class="track-divider"></div>
+        <div class="track-body">Delivered an API Management solution, defining and coordinating API strategy across departmental systems.</div>
+      </div>
+
+      <div class="track-card fade-up fade-up-delay-2">
+        <span class="track-sector track-sector-private">Private Sector</span>
+        <div class="track-client">Jaguar Land Rover</div>
+        <div class="track-divider"></div>
+        <div class="track-body">Business analysis and requirements workstream lead on a major Microsoft Dynamics CRM/ERP implementation.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CTA ───────────────────────────────────────────────── -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <div class="cta-text">
+        <div class="section-eyebrow section-eyebrow-inv">Ready to talk?</div>
+        <h2 class="cta-h2">Whether you're scoping a programme<br>or building a delivery team.</h2>
+        <p class="cta-sub">We're easy to engage and straightforward to work with. Get in touch and we'll come back to you quickly.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary-inv">Get in touch</a>
+        <a href="mailto:info@m2solutions.co.uk" class="cta-email">info@m2solutions.co.uk</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div style="max-width: 640px; margin: 0 auto; text-align: center;" class="fade-up">
-        <p class="section-label">Ready to talk?</p>
-        <h2 class="section-heading">Let's work through<br>the <em>challenge together.</em></h2>
-        <p class="section-body" style="margin: 20px auto 40px; text-align: center;">Whether you're at the start of a transformation programme or looking for specialist support mid-delivery, we'd be glad to have a conversation.</p>
-        <a href="contact.html" class="btn-primary" style="display: inline-flex;">
-          Get in touch
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <svg width="22" height="22" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M2 12 L38 40 L2 68 L18 68 L54 40 L18 12 Z" fill="white"/>
+        <path d="M26 12 L62 40 L26 68 L42 68 L78 40 L42 12 Z" fill="white" opacity="0.32"/>
+      </svg>
+      <div>
+        <div class="footer-m2">M2 Solutions</div>
+        <div class="footer-sol">Business Transformation Consultancy</div>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-logo">
-          <div class="logo-mark">M²</div>
-          M2 Solutions
-        </div>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <p class="footer-copy">© <span class="footer-year"></span> M2 Solutions Ltd. Company No. 10295130. Registered in England and Wales. m2solutions.co.uk</p>
+    <div class="footer-links">
+      <a href="about.html" class="footer-link">About</a>
+      <a href="index.html#services" class="footer-link">Services</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="mailto:info@m2solutions.co.uk" class="footer-link">info@m2solutions.co.uk</a>
     </div>
-  </footer>
+    <div class="footer-copy">© <span id="year"></span> M2 Solutions Ltd. All rights reserved.</div>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
