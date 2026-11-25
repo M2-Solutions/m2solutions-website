@@ -7,6 +7,13 @@
 # - static.cloudflareinsights.com / cloudflareinsights.com: Cloudflare Web
 #   Analytics beacon, injected by Cloudflare on the live site.
 # - The JSON-LD block on the homepage is data, not script, so CSP ignores it.
+# - Known, accepted violation: Cloudflare injects an inline "JavaScript
+#   Detections" bot-detection script (it loads /cdn-cgi/challenge-platform/...).
+#   Its contents change on every request, so it can't be allowed by hash and is
+#   blocked. The site is unaffected; Cloudflare just gets a weaker bot signal.
+#   You'll see an "Executing inline script violates ... script-src" error in the
+#   browser console for it. To clear it, either turn off JavaScript Detections
+#   in Cloudflare (Security > Bots) or loosen script-src (weakens the CSP).
 
 /*
   Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
