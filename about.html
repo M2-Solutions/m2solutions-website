@@ -32,6 +32,8 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav">
   <div class="container nav-inner">
@@ -51,17 +53,19 @@
       <a href="index.html#track-record" class="nav-link">Work</a>
       <a href="contact.html" class="nav-cta">Get in touch</a>
     </div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="nav-mobile">
+  <div class="nav-mobile" id="mobile-menu">
     <a href="about.html" class="nav-mobile-link">About</a>
     <a href="index.html#services" class="nav-mobile-link">Services</a>
     <a href="index.html#track-record" class="nav-mobile-link">Work</a>
     <a href="contact.html" class="nav-mobile-cta">Get in touch</a>
   </div>
 </nav>
+
+<main id="main" tabindex="-1">
 
 
 <!-- ── PAGE HERO ─────────────────────────────────────────── -->
@@ -259,6 +263,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->

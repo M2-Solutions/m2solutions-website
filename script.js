@@ -13,32 +13,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNav = document.querySelector('.nav-mobile');
 
   if (hamburger && mobileNav) {
+    const bars = hamburger.querySelectorAll('span');
+
+    const setMenu = (open) => {
+      mobileNav.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      // Animate bars into an X when open
+      bars[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+      bars[1].style.opacity = open ? '0' : '';
+      bars[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+    };
+
     hamburger.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
-      // Animate bars
-      const bars = hamburger.querySelectorAll('span');
-      if (isOpen) {
-        bars[0].style.transform = 'translateY(7px) rotate(45deg)';
-        bars[1].style.opacity = '0';
-        bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-      } else {
-        bars[0].style.transform = '';
-        bars[1].style.opacity = '';
-        bars[2].style.transform = '';
-      }
+      setMenu(!mobileNav.classList.contains('open'));
     });
 
     // Close on mobile link click
     mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-        const bars = hamburger.querySelectorAll('span');
-        bars[0].style.transform = '';
-        bars[1].style.opacity = '';
-        bars[2].style.transform = '';
-      });
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    // Close on Escape, returning focus to the menu button
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+        setMenu(false);
+        hamburger.focus();
+      }
     });
   }
 

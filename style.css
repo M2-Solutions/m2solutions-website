@@ -72,6 +72,7 @@
   --max-w: 1100px;
   --gutter: 40px;
   --section-pad: 96px;
+  --nav-h: 68px;
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -96,6 +97,27 @@ button { cursor: pointer; font-family: var(--font-body); }
   padding: 0 var(--gutter);
 }
 
+/* ── SKIP LINK ───────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 200;
+  background: var(--white);
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 600;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+/* Keep anchor targets clear of the fixed nav */
+[id] { scroll-margin-top: var(--nav-h); }
+main:focus { outline: none; }
+
 /* ── NAVIGATION ──────────────────────────────────────────── */
 .nav {
   position: fixed;
@@ -108,7 +130,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: var(--nav-h);
 }
 .nav-logo {
   display: flex;
@@ -869,7 +891,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 /* ── THANK YOU PAGE ──────────────────────────────────────── */
 .thankyou-inner {
-  min-height: calc(100vh - 68px);
+  min-height: calc(100vh - var(--nav-h));
   display: flex;
   align-items: center;
   justify-content: center;
