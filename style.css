@@ -1031,4 +1031,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   .section-h2 { font-size: 26px; }
   .how-statement { font-size: 22px; }
   .cta-h2 { font-size: 26px; }
+  /* Stack the sector pill above the text so descriptions use the full width */
+  .delivered-item { flex-direction: column; gap: var(--space-3); }
+  .delivered-sector-pill { margin-top: 0; }
 }
