@@ -472,6 +472,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   color: var(--haze);
   line-height: 1.6;
 }
+.how-step-icon { background: rgba(154,176,201,0.15); }
 .how-divider {
   height: 1px;
   background: rgba(255,255,255,0.07);
@@ -583,6 +584,9 @@ button { cursor: pointer; font-family: var(--font-body); }
   cursor: pointer;
   white-space: nowrap;
 }
+.btn-spaced { margin-top: var(--space-2); }
+.how-cta { align-self: flex-start; }
+
 .btn-primary {
   background: var(--navy);
   color: var(--white);
@@ -613,6 +617,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   gap: 80px;
   align-items: start;
 }
+.about-grid-center { align-items: center; }
 .about-body {
   display: flex;
   flex-direction: column;
@@ -752,6 +757,17 @@ button { cursor: pointer; font-family: var(--font-body); }
   transition: color 0.15s;
 }
 .contact-direct-email:hover { color: var(--steel); }
+
+.contact-company {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--cloud);
+}
+.contact-company .contact-direct-label { margin-bottom: var(--space-3); }
+.contact-company-details {
+  font-size: 13px;
+  color: var(--steel);
+  line-height: 1.7;
+}
 
 /* Form */
 .contact-form {
@@ -910,6 +926,13 @@ button { cursor: pointer; font-family: var(--font-body); }
   text-underline-offset: 3px;
 }
 .privacy-inner a:hover { color: var(--navy); }
+.privacy-inner .privacy-footer {
+  margin-top: 48px;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--cloud);
+  font-size: 13px;
+  color: var(--steel);
+}
 .privacy-meta {
   display: inline-flex;
   align-items: center;
