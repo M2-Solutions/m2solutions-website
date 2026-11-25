@@ -349,12 +349,15 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 .section-intro-inv { color: var(--haze); }
 
-/* Body copy on Cloud: Steel is only 4.0:1 here, so use Navy (9.2:1) */
+/* Text on Cloud: Steel is only 4.0:1 here, so use Navy (9.2:1) */
 .section-cloud .section-intro,
 .section-cloud .how-body,
 .section-cloud .about-p,
 .section-cloud .delivered-partner,
-.section-cloud .delivered-desc { color: var(--navy); }
+.section-cloud .delivered-desc,
+.section-cloud .section-eyebrow,
+.about-fact .about-fact-label,
+.privacy-inner .privacy-meta { color: var(--navy); }
 
 /* ── SERVICES GRID ───────────────────────────────────────── */
 .services-grid {
