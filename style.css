@@ -667,6 +667,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   display: flex;
   flex-direction: column;
   gap: 0;
+  margin-top: 40px;
 }
 .delivered-item {
   display: flex;
@@ -1031,6 +1032,8 @@ button { cursor: pointer; font-family: var(--font-body); }
   .section-h2 { font-size: 26px; }
   .how-statement { font-size: 22px; }
   .cta-h2 { font-size: 26px; }
+  /* Mid-sentence heading breaks strand single words on narrow screens */
+  .br-wide { display: none; }
   /* Stack the sector pill above the text so descriptions use the full width */
   .delivered-item { flex-direction: column; gap: var(--space-3); }
   .delivered-sector-pill { margin-top: 0; }
