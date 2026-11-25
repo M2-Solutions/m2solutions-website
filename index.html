@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
   <title>M2 Solutions — Business Transformation Consultancy</title>
   <meta name="description" content="M2 Solutions brings order to complex digital programmes, from discovery through to delivery. Senior delivery capability for consultancies and system integrators.">
 
@@ -15,6 +16,46 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="M2 Solutions">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "M2 Solutions",
+    "legalName": "M2 Solutions Ltd",
+    "url": "https://m2solutions.co.uk/",
+    "logo": "https://m2solutions.co.uk/logo.png",
+    "email": "info@m2solutions.co.uk",
+    "description": "Business transformation consultancy providing senior delivery capability — business analysis, product ownership, systems integration and data & API strategy — for consultancies and system integrators on complex digital programmes.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "St James House, 65 Mere Green Road",
+      "addressLocality": "Sutton Coldfield",
+      "addressRegion": "West Midlands",
+      "postalCode": "B75 5BY",
+      "addressCountry": "GB"
+    },
+    "vatID": "GB257760084",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "Companies House company number",
+      "value": "10295130"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/m2-solutions-ltd/"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Matthew Morgan",
+      "jobTitle": "Founder & Principal Consultant",
+      "sameAs": [
+        "https://www.linkedin.com/in/mattmorganuk/"
+      ]
+    }
+  }
+  </script>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://m2solutions.co.uk/">
@@ -22,14 +63,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts (self-hosted) -->
+  <link rel="preload" href="fonts/quicksand-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav">
@@ -50,17 +92,19 @@
       <a href="index.html#track-record" class="nav-link">Work</a>
       <a href="contact.html" class="nav-cta">Get in touch</a>
     </div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="nav-mobile">
+  <div class="nav-mobile" id="mobile-menu">
     <a href="about.html" class="nav-mobile-link">About</a>
     <a href="index.html#services" class="nav-mobile-link">Services</a>
     <a href="index.html#track-record" class="nav-mobile-link">Work</a>
     <a href="contact.html" class="nav-mobile-cta">Get in touch</a>
   </div>
 </nav>
+
+<main id="main" tabindex="-1">
 
 
 <!-- ── HERO ─────────────────────────────────────────────── -->
@@ -84,7 +128,7 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-eyebrow">What we deliver</div>
-      <h2 class="section-h2">Senior resource across the full<br>delivery lifecycle.</h2>
+      <h2 class="section-h2">Senior resource across the full <br class="br-wide">delivery lifecycle.</h2>
       <p class="section-intro">The kind of specialist your partners and clients will trust from day one — embedded in your team, representing you well.</p>
     </div>
     <div class="services-grid">
@@ -98,7 +142,7 @@
             <path d="M15.5 12v7M12 15.5h7" stroke="#567596" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="service-title">Business Analysis</div>
+        <h3 class="service-title">Business Analysis</h3>
         <div class="service-body">Requirements gathering, process mapping, stakeholder engagement, and delivery documentation — structured and clear, from the outset.</div>
       </div>
 
@@ -109,7 +153,7 @@
             <path d="M4 18h14" stroke="#567596" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="service-title">Product Ownership</div>
+        <h3 class="service-title">Product Ownership</h3>
         <div class="service-body">Backlog management, prioritisation, sprint planning, and delivery oversight. We keep complex programmes moving in the right direction.</div>
       </div>
 
@@ -122,7 +166,7 @@
             <path d="M11 5v3M11 14v3" stroke="#567596" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="service-title">Systems Integration</div>
+        <h3 class="service-title">Systems Integration</h3>
         <div class="service-body">Defining and managing integrations between enterprise systems — with the rigour and precision that high-stakes programmes demand.</div>
       </div>
 
@@ -132,7 +176,7 @@
             <path d="M3 16l4-5 3 3 4-6 5 4" stroke="#567596" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="service-title">Data & API Strategy</div>
+        <h3 class="service-title">Data & API Strategy</h3>
         <div class="service-body">Scoping, documenting, and coordinating data flows and API-driven solutions across complex organisational landscapes.</div>
       </div>
 
@@ -147,15 +191,15 @@
     <div class="how-grid">
       <div class="how-text fade-up">
         <div class="section-eyebrow">How we work</div>
-        <div class="how-statement">We slot into your team.<br>Not above it.</div>
+        <h2 class="how-statement">We slot into your team.<br>Not above it.</h2>
         <p class="how-body">Consultancies and system integrators come to us when they need experienced specialists to fulfil delivery roles on client programmes. We operate as a trusted extension of your team — senior enough to represent you well, flexible enough to fit how you work.</p>
-        <a href="contact.html" class="btn btn-primary" style="align-self:flex-start; margin-top:8px;">Get in touch</a>
+        <a href="contact.html" class="btn btn-primary btn-spaced how-cta">Get in touch</a>
       </div>
       <div class="how-visual fade-up fade-up-delay-1">
         <div class="how-step">
           <div class="how-step-num">1</div>
           <div class="how-step-text">
-            <div class="how-step-label">Discovery</div>
+            <h3 class="how-step-label">Discovery</h3>
             <div class="how-step-desc">Understanding the programme, the team, and what good delivery looks like in this context.</div>
           </div>
         </div>
@@ -163,7 +207,7 @@
         <div class="how-step">
           <div class="how-step-num">2</div>
           <div class="how-step-text">
-            <div class="how-step-label">Embed</div>
+            <h3 class="how-step-label">Embed</h3>
             <div class="how-step-desc">Joining your delivery team — representing your organisation, contributing from day one.</div>
           </div>
         </div>
@@ -171,7 +215,7 @@
         <div class="how-step">
           <div class="how-step-num">3</div>
           <div class="how-step-text">
-            <div class="how-step-label">Deliver</div>
+            <h3 class="how-step-label">Deliver</h3>
             <div class="how-step-desc">Bringing clarity, structure, and momentum across the full lifecycle — from requirements to handover.</div>
           </div>
         </div>
@@ -186,60 +230,59 @@
   <div class="container">
     <div class="fade-up">
       <div class="section-eyebrow">Track record</div>
-      <h2 class="section-h2">Delivered across government<br>and large enterprise.</h2>
+      <h2 class="section-h2">Delivered across government <br class="br-wide">and large enterprise.</h2>
       <p class="section-intro">In programmes where the stakes are high and the margin for error is low.</p>
     </div>
     <div class="track-grid">
 
       <div class="track-card fade-up fade-up-delay-1">
         <span class="track-sector">Public Sector</span>
-        <div class="track-client">DEFRA — Border Trade Matching Service</div>
+        <h3 class="track-client">DEFRA — Border Trade Matching Service</h3>
         <div class="track-partner">Via Equal Experts</div>
         <div class="track-divider"></div>
-        <div class="track-body">Business Analyst and Product Owner on BTMS — a critical government service matching Customs Declarations with health entry documents for goods entering the UK.</div>
+        <div class="track-body">Business Analyst and Product Owner on a critical border service matching customs declarations with health documents for goods entering the UK.</div>
       </div>
 
       <div class="track-card fade-up fade-up-delay-2">
         <span class="track-sector">Public Sector</span>
-        <div class="track-client">DEFRA — IPAFFS</div>
-        <div class="track-partner">Via Kainos / Anson McCade</div>
+        <h3 class="track-client">DEFRA — IPAFFS</h3>
+        <div class="track-partner">Via Kainos</div>
         <div class="track-divider"></div>
-        <div class="track-body">Product Consultant and Business Analyst on the Import of Products, Animals, Food and Feed System. Delivered EU harmonisation of plant risk levels, commodity code standard updates, and integration design for the Common User Charge implementation.</div>
+        <div class="track-body">Product Consultant and Business Analyst on the UK's import system for regulated goods, from EU harmonisation to the Common User Charge.</div>
       </div>
 
       <div class="track-card fade-up fade-up-delay-1">
         <span class="track-sector">Public Sector</span>
-        <div class="track-client">Department for Education</div>
+        <h3 class="track-client">Department for Education</h3>
         <div class="track-partner">Via Methods</div>
         <div class="track-divider"></div>
-        <div class="track-body">Lead IT Business Analyst and Product Owner on the Cloud Infrastructure Platform programme. Led the API Management Service through a GDS assessment and defined Azure-hosted integration architecture connecting Zendesk, ServiceNow, and Dynamics 365.</div>
+        <div class="track-body">Lead IT Business Analyst and Product Owner on DfE's Azure-based Cloud Infrastructure Platform, including a successful GDS assessment.</div>
       </div>
 
       <div class="track-card fade-up fade-up-delay-2">
         <span class="track-sector track-sector-private">Private Sector</span>
-        <div class="track-client">Calyx</div>
+        <h3 class="track-client">Calyx</h3>
         <div class="track-partner">Via M3 Consulting</div>
         <div class="track-divider"></div>
-        <div class="track-body">Lead Business Analyst on an M&A technology separation programme — legally and financially separating Calyx from its former parent company, Parexel. Involved Azure resource analysis, Microsoft Enterprise Agreement migration, and coordination of globally distributed development teams.</div>
+        <div class="track-body">Lead Business Analyst on an M&A technology separation, splitting Calyx from its former parent company, Parexel.</div>
       </div>
 
       <div class="track-card fade-up fade-up-delay-1">
         <span class="track-sector track-sector-private">Private Sector</span>
-        <div class="track-client">Rolls-Royce</div>
-        <div class="track-partner">Via Emperic</div>
+        <h3 class="track-client">Rolls-Royce</h3>
         <div class="track-divider"></div>
-        <div class="track-body">IT Business Analyst across Business Aviation, Civil Aerospace, and Defence divisions. Delivered requirements for a Technical Publications replacement, led a Maximo migration to IBM Cloud SaaS, and digitised the MRO process end-to-end.</div>
+        <div class="track-body">IT Business Analyst across the Business Aviation, Civil Aerospace and Defence divisions.</div>
       </div>
 
       <div class="track-card fade-up fade-up-delay-2">
         <span class="track-sector track-sector-private">Private Sector</span>
-        <div class="track-client">Jaguar Land Rover</div>
-        <div class="track-partner">Via Montash</div>
+        <h3 class="track-client">Jaguar Land Rover</h3>
         <div class="track-divider"></div>
-        <div class="track-body">Lead Business Analyst on a circa £5m Vehicle Operations transformation — implementing Microsoft Dynamics 365 for Operations and CRM to replace manual, paper-based processes. Contributed to the business case that secured programme funding.</div>
+        <div class="track-body">Lead Business Analyst on a circa £5m Dynamics 365 transformation of the Vehicle Operations department.</div>
       </div>
 
     </div>
+    <a href="about.html#track-record" class="track-more fade-up">See the full track record →</a>
   </div>
 </section>
 
@@ -250,7 +293,7 @@
     <div class="cta-inner fade-up">
       <div class="cta-text">
         <div class="section-eyebrow section-eyebrow-inv">Ready to talk?</div>
-        <h2 class="cta-h2">Whether you're scoping a programme<br>or building a delivery team.</h2>
+        <h2 class="cta-h2">Whether you're scoping a programme <br class="br-wide">or building a delivery team.</h2>
         <p class="cta-sub">We're easy to engage and straightforward to work with. Get in touch and we'll come back to you quickly.</p>
       </div>
       <div class="cta-actions">
@@ -260,6 +303,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->

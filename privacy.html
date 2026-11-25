@@ -3,19 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
   <title>Privacy Policy — M2 Solutions</title>
   <meta name="description" content="Privacy policy for M2 Solutions — how we collect, use, and protect your personal data.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://m2solutions.co.uk/privacy.html">
+  <meta property="og:title" content="Privacy Policy — M2 Solutions">
+  <meta property="og:description" content="How M2 Solutions collects, uses, and protects your personal data.">
+  <meta property="og:image" content="https://m2solutions.co.uk/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="M2 Solutions">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://m2solutions.co.uk/privacy.html">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts (self-hosted) -->
+  <link rel="preload" href="fonts/quicksand-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav">
@@ -36,17 +53,19 @@
       <a href="index.html#track-record" class="nav-link">Work</a>
       <a href="contact.html" class="nav-cta">Get in touch</a>
     </div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="nav-mobile">
+  <div class="nav-mobile" id="mobile-menu">
     <a href="about.html" class="nav-mobile-link">About</a>
     <a href="index.html#services" class="nav-mobile-link">Services</a>
     <a href="index.html#track-record" class="nav-mobile-link">Work</a>
     <a href="contact.html" class="nav-mobile-cta">Get in touch</a>
   </div>
 </nav>
+
+<main id="main" tabindex="-1">
 
 
 <!-- ── PAGE HERO ─────────────────────────────────────────── -->
@@ -63,7 +82,7 @@
 <section class="section section-white">
   <div class="privacy-inner">
 
-    <span class="privacy-meta">Last updated: May 2026</span>
+    <span class="privacy-meta">Last updated: November 2026</span>
 
     <p>This privacy policy explains how M2 Solutions Ltd ("M2 Solutions", "we", "us", "our") collects and uses personal data when you visit <a href="https://m2solutions.co.uk">m2solutions.co.uk</a> or contact us through this website.</p>
 
@@ -87,20 +106,27 @@
       <li>Your email address</li>
       <li>The contents of your message</li>
     </ul>
-    <p>We use this information to respond to your enquiry. The legal basis for processing this data is <strong>legitimate interests</strong> — specifically, responding to business enquiries made to us.</p>
-    <p>Form submissions are stored securely by Netlify, our website hosting provider, and are also delivered to our email inbox. We retain enquiry data for as long as is reasonably necessary to manage our business relationship with you, and will delete it on request.</p>
+    <p>We use this information to respond to your enquiry. The legal basis for processing this data is <strong>legitimate interests</strong> — specifically, responding to business enquiries made to us. If your enquiry leads to an engagement, we also process your details to perform our contract and to meet our legal obligations, such as tax and accounting records.</p>
+    <p>Form submissions are stored securely by Netlify, our website hosting provider, and are also delivered to our email inbox.</p>
+
+    <h3>How long we keep it</h3>
+    <ul>
+      <li><strong>Enquiries that don't lead to work:</strong> deleted 24 months after our last contact with you.</li>
+      <li><strong>Enquiries that lead to an engagement:</strong> kept for the duration of the engagement and for 6 years after it ends, in line with UK limitation periods and HMRC record-keeping requirements.</li>
+    </ul>
+    <p>You can ask us to delete your data sooner at any time, unless we are legally required to keep it.</p>
 
     <h3>Website analytics</h3>
     <p>We use Cloudflare Web Analytics to understand how visitors use our website. Cloudflare Analytics is cookieless and privacy-preserving by design — it does not track individuals across websites, does not set cookies, and does not use fingerprinting techniques. The data it collects (page views, referral sources, countries, browser types) is aggregated and cannot be used to identify you personally.</p>
     <p>Because no personal data is collected through Cloudflare Analytics, no consent is required for its use under UK GDPR or PECR.</p>
 
-    <h3>Google Fonts</h3>
-    <p>Our website loads fonts from Google Fonts. When your browser requests a font, Google's servers log your IP address. This is a standard part of how web fonts operate. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>. We do not control this processing and it is governed by Google's own terms.</p>
+    <h3>Fonts</h3>
+    <p>The fonts on this website are hosted on our own servers. Loading them does not send any data to third parties.</p>
 
 
     <h2>3. Cookies</h2>
 
-    <p>This website does not set any cookies of its own. Cloudflare Analytics is explicitly cookieless. Google Fonts may cause your browser to cache font files locally, but this is not a cookie.</p>
+    <p>This website does not set any cookies of its own. Cloudflare Analytics is explicitly cookieless.</p>
     <p>No consent banner is displayed on this site because no consent-requiring cookies or trackers are used.</p>
 
 
@@ -110,7 +136,6 @@
     <ul>
       <li><strong>Netlify</strong> — website hosting and contact form storage (United States; Netlify participates in the EU-US Data Privacy Framework)</li>
       <li><strong>Cloudflare</strong> — website delivery, DNS, and privacy-preserving analytics</li>
-      <li><strong>Google</strong> — font delivery via Google Fonts</li>
       <li><strong>Microsoft</strong> — email delivery via Microsoft 365 (enquiries submitted through the contact form are received in our Microsoft 365 inbox)</li>
     </ul>
 
@@ -143,13 +168,15 @@
 
     <p>For any questions about this policy or how we handle your data, contact us at <a href="mailto:info@m2solutions.co.uk">info@m2solutions.co.uk</a>.</p>
 
-    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--cloud); font-size: 13px; color: var(--haze);">
+    <p class="privacy-footer">
       M2 Solutions Ltd · Company No. 10295130 · ICO Registration ZB428775<br>
       St James House, 65 Mere Green Road, Sutton Coldfield, West Midlands, B75 5BY
     </p>
 
   </div>
 </section>
+
+</main>
 
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
   <title>About — M2 Solutions</title>
   <meta name="description" content="M2 Solutions brings order to complex digital programmes, from discovery through to delivery. Learn about who we are and how we work.">
 
@@ -15,6 +16,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="M2 Solutions">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://m2solutions.co.uk/about.html">
@@ -22,14 +24,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts (self-hosted) -->
+  <link rel="preload" href="fonts/quicksand-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav">
@@ -50,17 +53,19 @@
       <a href="index.html#track-record" class="nav-link">Work</a>
       <a href="contact.html" class="nav-cta">Get in touch</a>
     </div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="nav-mobile">
+  <div class="nav-mobile" id="mobile-menu">
     <a href="about.html" class="nav-mobile-link">About</a>
     <a href="index.html#services" class="nav-mobile-link">Services</a>
     <a href="index.html#track-record" class="nav-mobile-link">Work</a>
     <a href="contact.html" class="nav-mobile-cta">Get in touch</a>
   </div>
 </nav>
+
+<main id="main" tabindex="-1">
 
 
 <!-- ── PAGE HERO ─────────────────────────────────────────── -->
@@ -78,7 +83,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-body fade-up">
-        <div class="section-eyebrow">Who we are</div>
+        <h2 class="section-eyebrow">Who we are</h2>
         <p class="about-p">M2 Solutions brings order to complex digital programmes, from discovery through to delivery. We embed senior capability within delivery teams — bringing clarity, structure, and momentum to work that matters.</p>
         <div class="about-statement">Experienced, senior-level resource that slots seamlessly into established delivery teams — trusted to represent our partners well, and focused entirely on getting the programme moving.</div>
         <p class="about-p">We work with consultancies and system integrators who win contracts with large enterprises and government departments, and need trusted specialists to fulfil delivery roles within those programmes.</p>
@@ -102,13 +107,34 @@
 </section>
 
 
+<!-- ── WHO YOU'LL WORK WITH ──────────────────────────────── -->
+<section class="section section-cloud" id="who-youll-work-with">
+  <div class="container">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="section-eyebrow">Who you'll work with</div>
+        <h2 class="section-h2">Senior, hands-on,<br>from day one.</h2>
+      </div>
+      <div class="person fade-up fade-up-delay-1">
+        <h3 class="person-name">Matthew Morgan</h3>
+        <div class="person-role">Founder &amp; Principal Consultant</div>
+        <p class="about-p">Matthew Morgan is a senior Business Analyst and Product Owner with 15+ years' experience delivering complex digital programmes across UK central government and large enterprise.</p>
+        <p class="about-p">Recent work includes product ownership on DEFRA's Border Trade Matching Service, leading business analysis on the Department for Education's Cloud Infrastructure Platform through a GDS service assessment, and an M&amp;A technology separation at Calyx. Earlier engagements include Rolls-Royce and Jaguar Land Rover.</p>
+        <p class="about-p">Equally at home on requirements, backlog ownership and integration design, with particular depth in Microsoft Azure, Dynamics 365 and API-led integration.</p>
+        <a href="https://www.linkedin.com/in/mattmorganuk/" class="person-link" target="_blank" rel="noopener noreferrer">View Matthew's LinkedIn profile →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ── WHAT WE BRING ──────────────────────────────────────── -->
-<section class="section section-cloud" id="what-we-bring">
+<section class="section section-white" id="what-we-bring">
   <div class="container">
     <div class="about-grid">
       <div class="fade-up">
         <div class="section-eyebrow">What we bring</div>
-        <h2 class="section-h2">Experience that goes<br>the full distance.</h2>
+        <h2 class="section-h2">Experience that goes <br class="br-wide">the full distance.</h2>
       </div>
       <div class="about-body fade-up fade-up-delay-1">
         <p class="about-p">We've delivered across the full spectrum of business analysis and product ownership — in programmes that are technically complex, politically sensitive, and operationally critical.</p>
@@ -120,12 +146,12 @@
 
 
 <!-- ── WHO WE WORK WITH ───────────────────────────────────── -->
-<section class="section section-white" id="who-we-work-with">
+<section class="section section-cloud" id="who-we-work-with">
   <div class="container">
-    <div class="about-grid" style="align-items:center;">
-      <div class="how-visual fade-up" style="order:1;">
+    <div class="about-grid about-grid-center">
+      <div class="how-visual fade-up">
         <div class="how-step">
-          <div class="how-step-num" style="background:rgba(154,176,201,0.15);">
+          <div class="how-step-num how-step-icon">
             <svg width="14" height="14" viewBox="0 0 80 80" fill="none" aria-hidden="true">
               <path d="M2 12 L38 40 L2 68 L18 68 L54 40 L18 12 Z" fill="#9ab0c9"/>
               <path d="M26 12 L62 40 L26 68 L42 68 L78 40 L42 12 Z" fill="#9ab0c9" opacity="0.5"/>
@@ -138,7 +164,7 @@
         </div>
         <div class="how-divider"></div>
         <div class="how-step">
-          <div class="how-step-num" style="background:rgba(154,176,201,0.15);">
+          <div class="how-step-num how-step-icon">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <rect x="1" y="5" width="12" height="8" rx="1.5" stroke="#9ab0c9" stroke-width="1.5"/>
               <path d="M4 5V4a3 3 0 016 0v1" stroke="#9ab0c9" stroke-width="1.5" stroke-linecap="round"/>
@@ -151,7 +177,7 @@
         </div>
         <div class="how-divider"></div>
         <div class="how-step">
-          <div class="how-step-num" style="background:rgba(154,176,201,0.15);">
+          <div class="how-step-num how-step-icon">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2 11V5l5-3 5 3v6" stroke="#9ab0c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <rect x="5" y="7" width="4" height="4" rx="0.5" stroke="#9ab0c9" stroke-width="1.3"/>
@@ -163,9 +189,9 @@
           </div>
         </div>
       </div>
-      <div class="about-body fade-up fade-up-delay-1" style="order:2;">
+      <div class="about-body fade-up fade-up-delay-1">
         <div class="section-eyebrow">Who we work with</div>
-        <h2 class="section-h2">Partners who need<br>someone they can trust.</h2>
+        <h2 class="section-h2">Partners who need <br class="br-wide">someone they can trust.</h2>
         <p class="about-p">Most of our engagements come through consultancies and system integrators — organisations who win contracts with large enterprises and government departments, and need experienced specialists to fulfil delivery roles within those programmes.</p>
         <p class="about-p">We understand the model. We know what it means to represent a partner organisation in front of their client, and we take that responsibility seriously.</p>
       </div>
@@ -175,18 +201,18 @@
 
 
 <!-- ── WHERE WE'VE DELIVERED ──────────────────────────────── -->
-<section class="section section-cloud" id="track-record">
+<section class="section section-white" id="track-record">
   <div class="container">
     <div class="fade-up">
       <div class="section-eyebrow">Where we've delivered</div>
-      <h2 class="section-h2">Environments where precision<br>is non-negotiable.</h2>
+      <h2 class="section-h2">Environments where precision <br class="br-wide">is non-negotiable.</h2>
     </div>
     <div class="delivered-list">
 
       <div class="delivered-item fade-up">
         <span class="delivered-sector-pill">Public Sector</span>
         <div class="delivered-text">
-          <div class="delivered-client">DEFRA — Border Trade Matching Service</div>
+          <h3 class="delivered-client">DEFRA — Border Trade Matching Service</h3>
           <div class="delivered-partner">Via Equal Experts</div>
           <div class="delivered-desc">Business Analyst and Product Owner on BTMS — a critical government service matching Customs Declarations with health entry documents for goods entering the UK. Complex, high-stakes integration work at the border of government systems.</div>
         </div>
@@ -195,8 +221,8 @@
       <div class="delivered-item fade-up">
         <span class="delivered-sector-pill">Public Sector</span>
         <div class="delivered-text">
-          <div class="delivered-client">DEFRA — IPAFFS (Import of Products, Animals, Food and Feed System)</div>
-          <div class="delivered-partner">Via Kainos / Anson McCade</div>
+          <h3 class="delivered-client">DEFRA — IPAFFS (Import of Products, Animals, Food and Feed System)</h3>
+          <div class="delivered-partner">Via Kainos</div>
           <div class="delivered-desc">Product Consultant and Business Analyst on IPAFFS — the service managing the import of regulated goods into the UK. Delivered EU harmonisation of plant risk levels integrating with Microsoft Dynamics 365, managed commodity code updates to CN2022 and CN2024 standards, and led the business analysis function on the Common User Charge implementation including integration design using industry-standard cloud tooling. Operated within a GDS delivery approach, managing the product backlog in Jira with documentation in Confluence.</div>
         </div>
       </div>
@@ -204,7 +230,7 @@
       <div class="delivered-item fade-up">
         <span class="delivered-sector-pill">Public Sector</span>
         <div class="delivered-text">
-          <div class="delivered-client">Department for Education — Cloud Infrastructure Platform</div>
+          <h3 class="delivered-client">Department for Education — Cloud Infrastructure Platform</h3>
           <div class="delivered-partner">Via Methods</div>
           <div class="delivered-desc">Lead IT Business Analyst and Product Owner on the CIP programme, establishing a new Microsoft Azure-based platform for consumption across DfE services. Led requirements capture for the DfE API Management Service, owning the product backlog in Azure DevOps and successfully taking the service through a GDS assessment against the Service Standard. Also led requirements capture for an Azure-hosted integration middleware solution connecting Zendesk, ServiceNow, and Dynamics 365 CRM via APIs, Logic Apps, Function Apps, and Service Bus using a pub/sub model.</div>
         </div>
@@ -213,7 +239,7 @@
       <div class="delivered-item fade-up">
         <span class="delivered-sector-pill private">Private Sector</span>
         <div class="delivered-text">
-          <div class="delivered-client">Calyx — Technology Separation Programme</div>
+          <h3 class="delivered-client">Calyx — Technology Separation Programme</h3>
           <div class="delivered-partner">Via M3 Consulting</div>
           <div class="delivered-desc">Lead Business Analyst on an M&A programme to legally and financially separate Calyx — a global provider of medical imaging and eClinical software — from its former parent company, Parexel. Led analysis of Microsoft Azure resource utilisation across the organisation, engaged directly with Microsoft to transfer subscription ownership between Enterprise Agreements, and coordinated globally distributed development teams through application migration.</div>
         </div>
@@ -222,8 +248,7 @@
       <div class="delivered-item fade-up">
         <span class="delivered-sector-pill private">Private Sector</span>
         <div class="delivered-text">
-          <div class="delivered-client">Rolls-Royce</div>
-          <div class="delivered-partner">Via Emperic</div>
+          <h3 class="delivered-client">Rolls-Royce</h3>
           <div class="delivered-desc">IT Business Analyst across multiple workstreams within the Business Aviation, Civil Aerospace, and Defence divisions. Delivered requirements capture for a replacement Technical Publications solution, led the migration of an on-premise Maximo instance to an IBM Cloud-hosted SaaS deployment including RBAC implementation for third-party access, and led the digitisation of the MRO process — coordinating with an external design agency to build a front-end solution integrating with Maximo.</div>
         </div>
       </div>
@@ -231,8 +256,7 @@
       <div class="delivered-item fade-up">
         <span class="delivered-sector-pill private">Private Sector</span>
         <div class="delivered-text">
-          <div class="delivered-client">Jaguar Land Rover — Vehicle Operations Transformation</div>
-          <div class="delivered-partner">Via Montash</div>
+          <h3 class="delivered-client">Jaguar Land Rover — Vehicle Operations Transformation</h3>
           <div class="delivered-desc">Lead Business Analyst on a circa £5m transformation programme implementing Microsoft Dynamics 365 for Operations and Dynamics CRM across the Vehicle Operations department — replacing largely manual, paper-based processes with digital, automated workflows. Contributed to the business case that secured programme funding, facilitated requirements workshops with business SMEs, and developed prototype wireframes to build senior stakeholder understanding and buy-in.</div>
         </div>
       </div>
@@ -248,7 +272,7 @@
     <div class="cta-inner fade-up">
       <div class="cta-text">
         <div class="section-eyebrow section-eyebrow-inv">Based in the UK</div>
-        <h2 class="cta-h2">Working where<br>you need us.</h2>
+        <h2 class="cta-h2">Working where <br class="br-wide">you need us.</h2>
         <p class="cta-sub">M2 Solutions is a UK registered limited company. We work with partners and clients across the UK, on-site or remotely, depending on programme requirements.</p>
       </div>
       <div class="cta-actions">
@@ -258,6 +282,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->

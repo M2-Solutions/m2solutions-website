@@ -1,0 +1,20 @@
+# Netlify response headers — https://docs.netlify.com/routing/headers/
+#
+# CSP notes:
+# - script-src hash is for the inline "js" class script in each page's <head>.
+#   If that script changes, regenerate the hash:
+#   printf "%s" "<script body>" | openssl dgst -sha256 -binary | base64
+# - static.cloudflareinsights.com / cloudflareinsights.com: Cloudflare Web
+#   Analytics beacon, injected by Cloudflare on the live site.
+# - The JSON-LD block on the homepage is data, not script, so CSP ignores it.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+# Font files never change in place; give them a new filename if they're updated.
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
   <title>Thank You — M2 Solutions</title>
   <meta name="robots" content="noindex">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts (self-hosted) -->
+  <link rel="preload" href="fonts/quicksand-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav">
@@ -37,17 +39,19 @@
       <a href="index.html#track-record" class="nav-link">Work</a>
       <a href="contact.html" class="nav-cta">Get in touch</a>
     </div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="nav-mobile">
+  <div class="nav-mobile" id="mobile-menu">
     <a href="about.html" class="nav-mobile-link">About</a>
     <a href="index.html#services" class="nav-mobile-link">Services</a>
     <a href="index.html#track-record" class="nav-mobile-link">Work</a>
     <a href="contact.html" class="nav-mobile-cta">Get in touch</a>
   </div>
 </nav>
+
+<main id="main" tabindex="-1">
 
 
 <!-- ── THANK YOU ─────────────────────────────────────────── -->
@@ -60,9 +64,11 @@
     </div>
     <h1 class="thankyou-h1">Thanks for getting in touch.</h1>
     <p class="thankyou-body">We've received your enquiry and will come back to you shortly. In the meantime, feel free to have a look around.</p>
-    <a href="index.html" class="btn btn-primary" style="margin-top:8px;">Back to home</a>
+    <a href="index.html" class="btn btn-primary btn-spaced">Back to home</a>
   </div>
 </div>
+
+</main>
 
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
